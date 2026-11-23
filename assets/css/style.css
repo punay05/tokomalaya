@@ -1,0 +1,1147 @@
+:root {
+    --primary: #198754;
+    --primary-dark: #146c43;
+    --primary-soft: #e9f7ef;
+    --accent: #f59e0b;
+    --danger: #dc3545;
+    --info: #0d6efd;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --bg: #f5f7f9;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --shadow: 0 8px 24px rgba(15, 23, 42, .07);
+    --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    color: var(--text);
+    background: var(--bg) !important;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important;
+}
+
+a { color: inherit; }
+
+/* Sidebar */
+.sidebar {
+    background: linear-gradient(180deg, #123d2b 0%, #0f5132 100%) !important;
+    border-right: 1px solid rgba(255,255,255,.08) !important;
+    box-shadow: 6px 0 24px rgba(15, 23, 42, .08);
+}
+.sidebar .logo {
+    padding: 24px 20px !important;
+    border-bottom: 1px solid rgba(255,255,255,.12) !important;
+    letter-spacing: .2px;
+}
+.sidebar .logo h2,
+.sidebar .logo h1 { color: #fff !important; }
+.sidebar .menu { padding: 14px 10px !important; }
+.sidebar .menu a {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin: 4px 0;
+    padding: 11px 13px !important;
+    border-radius: 10px !important;
+    color: rgba(255,255,255,.82) !important;
+    text-decoration: none;
+    transition: .18s ease;
+}
+.sidebar .menu a:hover,
+.sidebar .menu a.active {
+    background: rgba(255,255,255,.13) !important;
+    color: #fff !important;
+    transform: translateX(2px);
+}
+.sidebar .sidebar-bottom,
+.sidebar .logout { padding: 14px !important; }
+.sidebar .logout a,
+.sidebar .sidebar-bottom a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+/* Main content */
+.content {
+    background: var(--bg) !important;
+    padding: 30px !important;
+}
+.header {
+    margin-bottom: 22px !important;
+}
+.header h1,
+.header h2,
+.header h3 {
+    color: #111827 !important;
+    letter-spacing: -.3px;
+}
+.header p { color: var(--muted) !important; }
+
+/* Cards */
+.card,
+.cards .card,
+.stats .card,
+.section,
+.table-box,
+.chart-section,
+.detail-card,
+.info-card,
+.table-container,
+.total-box,
+.filter-box {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.cards,
+.stats { gap: 18px !important; }
+
+.card:hover,
+.cards .card:hover,
+.stats .card:hover {
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .09) !important;
+}
+
+.card-title { color: var(--muted) !important; font-size: 13px !important; font-weight: 600; }
+.card-value,
+.angka { color: var(--primary-dark) !important; font-weight: 800 !important; }
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+
+thead th {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+td, th {
+    border-bottom: 1px solid var(--border) !important;
+    padding: 13px 14px !important;
+}
+
+tbody tr:hover { background: #f8fbf9 !important; }
+
+tbody tr:last-child td { border-bottom: 0 !important; }
+
+/* Forms */
+input, select, textarea {
+    border: 1px solid #d7dde5 !important;
+    border-radius: 9px !important;
+    background: #fff !important;
+    color: #111827 !important;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(25,135,84,.12) !important;
+}
+
+button,
+.btn,
+button[type="submit"] {
+    border-radius: 9px !important;
+    font-weight: 650 !important;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease !important;
+}
+button:hover,
+.btn:hover,
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary,
+button.btn-primary { background: var(--primary) !important; }
+
+/* Alerts */
+.success { border-radius: 10px !important; border: 1px solid #b7e4c7 !important; }
+.error { border-radius: 10px !important; }
+
+/* Modal */
+.modal-content {
+    border: 0 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 24px 70px rgba(15,23,42,.22) !important;
+}
+.modal-header {
+    border-bottom: 1px solid var(--border) !important;
+}
+.modal-footer { border-top: 1px solid var(--border) !important; }
+
+/* Filters */
+.filter-box,
+.periode {
+    gap: 12px;
+}
+
+/* Status pills */
+.status,
+.badge,
+.status-badge {
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+}
+
+/* Kasir */
+.container {
+    background: var(--bg) !important;
+}
+.kasir-layout { gap: 20px !important; }
+.search-box,
+.payment,
+.struk-header,
+.transaksi,
+.transaksi-header {
+    border-radius: var(--radius) !important;
+}
+.search-box input { min-height: 44px; }
+.total-box {
+    border-left: 4px solid var(--primary) !important;
+}
+
+/* Buttons with common semantic classes */
+a[href*="hapus"],
+.hapus,
+.btn-hapus,
+.btn-danger {
+    background: var(--danger) !important;
+    color: #fff !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 210px !important;
+    }
+    .content { padding: 20px !important; }
+    .cards, .stats { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+}
+
+@media (max-width: 700px) {
+    .layout,
+    .container {
+        flex-direction: column !important;
+    }
+    .sidebar {
+        width: 100% !important;
+        min-height: auto !important;
+        position: relative !important;
+    }
+    .sidebar .menu {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 4px;
+    }
+    .sidebar .menu a {
+        white-space: nowrap;
+    }
+    .content { padding: 16px !important; }
+    .cards, .stats { grid-template-columns: 1fr !important; }
+    .table-container, .table-box, .detail-table { overflow-x: auto; }
+    table { min-width: 680px; }
+}
+
+/* =========================================================
+   SEMBAKOKU - UNIFIED FINAL LAYOUT
+   Menyamakan sidebar, header, tabel, tombol, dan spacing
+   pada seluruh halaman Admin/Kasir/Pemilik.
+   ========================================================= */
+
+:root {
+    --sidebar-width: 210px;
+    --brand: #0f5132;
+    --brand-2: #146c43;
+    --brand-soft: #eaf7ef;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0 !important;
+    background: #f4f6f8 !important;
+    color: #172033 !important;
+}
+
+/* ---------- SIDEBAR: SEMUA VARIASI HTML ---------- */
+.layout {
+    display: block !important;
+    min-height: 100vh !important;
+}
+
+.sidebar {
+    width: var(--sidebar-width) !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: linear-gradient(180deg, #0f5132 0%, #0b4630 100%) !important;
+    color: #fff !important;
+    border: 0 !important;
+    box-shadow: 4px 0 18px rgba(15, 23, 42, .08) !important;
+}
+
+.sidebar .logo,
+.sidebar > h2 {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 24px 20px !important;
+    color: #fff !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,.12) !important;
+    text-align: left !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    letter-spacing: .2px !important;
+    line-height: 1.2 !important;
+}
+
+.sidebar .logo h1,
+.sidebar .logo h2,
+.sidebar > h2 {
+    color: #fff !important;
+    margin: 0 !important;
+}
+
+.sidebar .menu {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    margin: 0 !important;
+    padding: 14px 10px !important;
+    overflow-y: auto !important;
+}
+
+.sidebar .menu a,
+.sidebar > a:not(.logout),
+.sidebar > a:not([href*="logout"]),
+.sidebar .sidebar-bottom a {
+    display: flex !important;
+    align-items: center !important;
+    width: calc(100% - 0px) !important;
+    min-height: 40px !important;
+    margin: 0 !important;
+    padding: 10px 13px !important;
+    border-radius: 9px !important;
+    color: rgba(255,255,255,.88) !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: background .15s ease, color .15s ease !important;
+}
+
+.sidebar .menu a:hover,
+.sidebar > a:not(.logout):hover,
+.sidebar .sidebar-bottom a:hover {
+    background: rgba(255,255,255,.10) !important;
+    color: #fff !important;
+    transform: none !important;
+}
+
+.sidebar .menu a.active,
+.sidebar > a.active,
+.sidebar > a[href$="dashboard.php"].active,
+.sidebar .sidebar-bottom a.active {
+    background: rgba(255,255,255,.14) !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+
+/* Logout selalu konsisten di bagian bawah */
+.sidebar .sidebar-bottom {
+    flex: 0 0 auto !important;
+    margin-top: auto !important;
+    padding: 12px 10px !important;
+    border-top: 1px solid rgba(255,255,255,.12) !important;
+    background: transparent !important;
+}
+
+.sidebar .menu a.logout,
+.sidebar > a.logout,
+.sidebar > a[href*="logout"],
+.sidebar .sidebar-bottom a[href*="logout"] {
+    margin-top: auto !important;
+    background: transparent !important;
+    color: #fff !important;
+    border-radius: 9px !important;
+}
+
+.sidebar .menu a.logout:hover,
+.sidebar > a.logout:hover,
+.sidebar > a[href*="logout"]:hover,
+.sidebar .sidebar-bottom a[href*="logout"]:hover {
+    background: rgba(220,53,69,.18) !important;
+    color: #fff !important;
+}
+
+/* ---------- CONTENT: SEMUA VARIASI ---------- */
+.content {
+    margin-left: var(--sidebar-width) !important;
+    min-height: 100vh !important;
+    padding: 28px !important;
+    background: #f4f6f8 !important;
+    width: auto !important;
+}
+
+.layout > .content {
+    margin-left: var(--sidebar-width) !important;
+}
+
+.header {
+    margin: 0 0 22px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 18px !important;
+}
+
+.header h1,
+.header h2,
+.header h3 {
+    margin: 0 !important;
+    color: #10203a !important;
+    font-size: 27px !important;
+    font-weight: 800 !important;
+    letter-spacing: -.5px !important;
+}
+
+.header p {
+    margin: 6px 0 0 !important;
+    color: #6b7280 !important;
+    font-size: 14px !important;
+}
+
+/* ---------- CARD / PANEL ---------- */
+.card,
+.cards .card,
+.stats .card,
+.section,
+.table-box,
+.table-container,
+.chart-section,
+.detail-card,
+.info-card,
+.total-box,
+.filter-box {
+    border-radius: 13px !important;
+    border: 1px solid #e3e7ed !important;
+    box-shadow: 0 5px 18px rgba(15,23,42,.055) !important;
+}
+
+/* ---------- TABEL ---------- */
+.table-box,
+.table-container {
+    overflow-x: auto !important;
+}
+
+table {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+thead th {
+    padding: 13px 14px !important;
+    background: #f8fafc !important;
+    color: #475569 !important;
+    white-space: nowrap !important;
+}
+
+tbody td {
+    padding: 13px 14px !important;
+    color: #334155 !important;
+    vertical-align: middle !important;
+}
+
+tbody tr:hover td {
+    background: #f8fbf9 !important;
+}
+
+/* ---------- BUTTON ---------- */
+button,
+.btn,
+a.btn,
+button[type="submit"] {
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+}
+
+/* ---------- FORM ---------- */
+input,
+select,
+textarea {
+    min-height: 40px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 760px) {
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .sidebar .menu {
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        flex: none !important;
+    }
+
+    .sidebar .menu a {
+        white-space: nowrap !important;
+    }
+
+    .sidebar .sidebar-bottom {
+        margin-top: 0 !important;
+    }
+
+    .content,
+    .layout > .content {
+        margin-left: 0 !important;
+        padding: 18px !important;
+    }
+
+    .header {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+    }
+}
+
+
+/* FINAL SPACING LOCK - BARANG & KATEGORI */
+.content {
+    margin-left: var(--sidebar-width) !important;
+    padding: 28px !important;
+}
+
+.content .table-container,
+.content .table-box {
+    padding: 18px !important;
+    margin: 0 !important;
+}
+
+.content .table-container table,
+.content .table-box table {
+    margin: 0 !important;
+}
+
+.content .table-container th,
+.content .table-container td,
+.content .table-box th,
+.content .table-box td {
+    padding: 13px 14px !important;
+}
+
+.content .header {
+    margin-bottom: 22px !important;
+}
+
+/* Samakan panel modal/form tanpa mengubah ukuran komponennya */
+.content .modal-content {
+    padding: 24px !important;
+}
+
+@media (max-width: 760px) {
+    .content {
+        margin-left: 0 !important;
+        padding: 18px !important;
+    }
+    .content .table-container,
+    .content .table-box {
+        padding: 14px !important;
+    }
+}
+
+/* =========================================================
+   SEMBAKOKU - REFERENCE UI THEME
+   Menyesuaikan tampilan dengan referensi yang diberikan:
+   sidebar navy, active blue, cards putih, tabel clean,
+   background abu muda, dan spacing konsisten.
+   ========================================================= */
+
+:root {
+    --ref-navy: #10243a;
+    --ref-navy-2: #0b1d2e;
+    --ref-blue: #1677e8;
+    --ref-blue-dark: #0f64c9;
+    --ref-blue-soft: #eaf3ff;
+    --ref-bg: #f4f7fb;
+    --ref-border: #e2e8f0;
+    --ref-text: #172033;
+    --ref-muted: #6b7280;
+    --ref-green: #16a36a;
+    --ref-red: #ef4444;
+    --ref-yellow: #f59e0b;
+    --ref-radius: 10px;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0 !important;
+    background: var(--ref-bg) !important;
+    color: var(--ref-text) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+}
+
+/* ===== APP LAYOUT ===== */
+.layout {
+    display: flex !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+}
+
+/* Some pages use .container as their whole app wrapper. */
+body > .container,
+.container.layout-container {
+    min-height: 100vh !important;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 205px !important;
+    min-width: 205px !important;
+    min-height: 100vh !important;
+    background: var(--ref-navy) !important;
+    color: #fff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    position: sticky !important;
+    top: 0 !important;
+    align-self: flex-start !important;
+    z-index: 20 !important;
+}
+
+.sidebar .logo,
+.sidebar > h2 {
+    height: 64px !important;
+    padding: 0 18px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    color: #fff !important;
+    background: var(--ref-navy) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    letter-spacing: .1px !important;
+}
+
+.sidebar .menu {
+    padding: 13px 9px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+}
+
+.sidebar .menu a,
+.sidebar > a {
+    min-height: 38px !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+    color: rgba(255,255,255,.76) !important;
+    background: transparent !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    transition: background .15s ease, color .15s ease !important;
+}
+
+.sidebar .menu a:hover,
+.sidebar > a:hover {
+    color: #fff !important;
+    background: rgba(255,255,255,.08) !important;
+    transform: none !important;
+}
+
+.sidebar .menu a.active,
+.sidebar > a.active {
+    color: #fff !important;
+    background: var(--ref-blue) !important;
+    box-shadow: none !important;
+}
+
+/* Small visual menu marker, matching the icon-led reference layout. */
+.sidebar .menu a::before,
+.sidebar > a::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    flex: 0 0 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.48);
+}
+
+.sidebar .menu a.active::before,
+.sidebar > a.active::before {
+    background: #fff;
+}
+
+.sidebar .sidebar-bottom,
+.sidebar .logout {
+    margin-top: auto !important;
+    padding: 9px !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+}
+
+.sidebar .sidebar-bottom a,
+.sidebar .logout a {
+    min-height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 12px !important;
+    border-radius: 6px !important;
+    color: rgba(255,255,255,.8) !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+}
+
+.sidebar .sidebar-bottom a:hover,
+.sidebar .logout a:hover {
+    background: rgba(255,255,255,.08) !important;
+    color: #fff !important;
+}
+
+/* Direct-link sidebar variant: make last logout visually separate. */
+.sidebar > a:last-child {
+    margin-top: auto !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+    border-radius: 0 !important;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+}
+
+/* ===== MAIN CONTENT ===== */
+.content {
+    flex: 1 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 22px 28px 32px !important;
+    background: var(--ref-bg) !important;
+}
+
+.header {
+    min-height: 62px !important;
+    margin: 0 0 18px !important;
+    padding: 2px 0 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.header h1 {
+    margin: 0 0 5px !important;
+    color: var(--ref-text) !important;
+    font-size: 21px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    letter-spacing: -.25px !important;
+}
+
+.header h2,
+.header h3 {
+    color: var(--ref-text) !important;
+}
+
+.header p {
+    margin: 0 !important;
+    color: var(--ref-muted) !important;
+    font-size: 12px !important;
+}
+
+/* ===== PAGE ACTION / TOP BUTTON ===== */
+.content > .header + a,
+.header + .btn,
+.header + button,
+.content .btn-tambah,
+.content .btn-primary,
+.content .btn-tambah-barang,
+.content .btn-buat-pembelian {
+    border-radius: 6px !important;
+}
+
+button,
+.btn,
+a.btn,
+input[type="submit"],
+input[type="button"] {
+    min-height: 34px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.btn-primary,
+.btn-tambah,
+.btn-tambah-barang,
+.btn-buat-pembelian,
+.btn-simpan,
+button.btn-primary,
+button[type="submit"].btn-primary {
+    background: var(--ref-blue) !important;
+    border-color: var(--ref-blue) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-tambah:hover,
+.btn-tambah-barang:hover,
+.btn-buat-pembelian:hover,
+.btn-simpan:hover {
+    background: var(--ref-blue-dark) !important;
+}
+
+/* ===== CARDS ===== */
+.cards,
+.stats,
+.report-grid {
+    gap: 14px !important;
+}
+
+.card,
+.cards .card,
+.stats .card,
+.section,
+.table-box,
+.table-container,
+.chart-section,
+.detail-card,
+.info-card,
+.total-box,
+.filter-box,
+.transaksi,
+.search-box,
+.payment {
+    background: #fff !important;
+    border: 1px solid var(--ref-border) !important;
+    border-radius: 9px !important;
+    box-shadow: 0 3px 14px rgba(15, 23, 42, .045) !important;
+}
+
+.card {
+    padding: 17px !important;
+}
+
+.card h3,
+.card-title {
+    margin: 0 0 8px !important;
+    color: #536174 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.card-value,
+.angka {
+    color: var(--ref-text) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+/* ===== TABLES ===== */
+.table-container,
+.table-box,
+.detail-card,
+.section {
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+table {
+    width: 100% !important;
+    margin: 0 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #fff !important;
+}
+
+thead th {
+    height: 42px !important;
+    padding: 0 13px !important;
+    background: #f8fafc !important;
+    color: #526173 !important;
+    border-bottom: 1px solid var(--ref-border) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .035em !important;
+    white-space: nowrap !important;
+}
+
+tbody td {
+    min-height: 47px !important;
+    padding: 10px 13px !important;
+    color: #344054 !important;
+    border-bottom: 1px solid #edf1f5 !important;
+    font-size: 11px !important;
+    vertical-align: middle !important;
+}
+
+tbody tr:hover td {
+    background: #f9fbff !important;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+/* Images in barang table */
+td img {
+    max-width: 48px !important;
+    max-height: 48px !important;
+    object-fit: contain !important;
+    border-radius: 4px !important;
+}
+
+/* ===== SEARCH / FILTER ===== */
+.filter-box,
+.periode {
+    padding: 12px 14px !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+input,
+select,
+textarea {
+    min-height: 34px !important;
+    padding: 8px 10px !important;
+    border: 1px solid #d8e0e9 !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+    color: #243041 !important;
+    font-size: 12px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: var(--ref-blue) !important;
+    box-shadow: 0 0 0 2px rgba(22,119,232,.12) !important;
+}
+
+/* ===== STATUS / BADGES ===== */
+.status,
+.badge,
+.status-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 24px !important;
+    padding: 3px 9px !important;
+    border-radius: 999px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.btn-edit,
+.edit,
+.btn-edit-data {
+    background: #1d83e9 !important;
+    color: #fff !important;
+    border: 0 !important;
+}
+
+.btn-delete,
+.hapus,
+.btn-hapus,
+.btn-danger {
+    background: #ef4444 !important;
+    color: #fff !important;
+    border: 0 !important;
+}
+
+.btn-terima,
+.btn-success,
+.btn-diterima {
+    background: #16a36a !important;
+    color: #fff !important;
+    border: 0 !important;
+}
+
+/* ===== MODAL ===== */
+.modal,
+.modal-overlay {
+    background: rgba(15, 23, 42, .48) !important;
+}
+
+.modal-content {
+    width: min(620px, calc(100vw - 32px)) !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    padding: 0 !important;
+    background: #fff !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 18px 60px rgba(15,23,42,.22) !important;
+}
+
+.modal-header {
+    padding: 15px 18px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid var(--ref-border) !important;
+}
+
+.modal-header h2 {
+    margin: 0 !important;
+    color: var(--ref-text) !important;
+    font-size: 16px !important;
+}
+
+.modal-content form {
+    padding: 18px !important;
+}
+
+.form-group {
+    margin-bottom: 12px !important;
+}
+
+.form-group label {
+    margin-bottom: 5px !important;
+    color: #445064 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+}
+
+.close {
+    color: #7b8797 !important;
+}
+
+/* ===== DASHBOARD ===== */
+.chart-section,
+.report-grid .section {
+    padding: 15px !important;
+}
+
+.chart-section h2,
+.section h2,
+.table-title h2 {
+    margin: 0 0 12px !important;
+    color: var(--ref-text) !important;
+    font-size: 14px !important;
+}
+
+/* ===== KASIR ===== */
+.kasir-layout {
+    gap: 14px !important;
+}
+
+.kasir-layout > .card,
+.kasir-layout .card {
+    border-radius: 9px !important;
+}
+
+.total-box {
+    border-left: 3px solid var(--ref-blue) !important;
+}
+
+/* ===== LOGIN ===== */
+.login-container {
+    width: min(390px, calc(100vw - 32px)) !important;
+    padding: 28px !important;
+    background: rgba(255,255,255,.97) !important;
+    border: 1px solid rgba(255,255,255,.7) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 60px rgba(15,23,42,.22) !important;
+}
+
+.login-container .logo h1 {
+    color: var(--ref-blue) !important;
+    font-size: 24px !important;
+}
+
+.btn-login {
+    min-height: 38px !important;
+    background: var(--ref-blue) !important;
+    border-radius: 6px !important;
+}
+
+.btn-login:hover {
+    background: var(--ref-blue-dark) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 190px !important;
+        min-width: 190px !important;
+    }
+    .content {
+        padding: 18px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .layout {
+        flex-direction: column !important;
+    }
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        min-height: auto !important;
+    }
+    .sidebar .menu {
+        flex-direction: row !important;
+        overflow-x: auto !important;
+    }
+    .sidebar .menu a,
+    .sidebar > a {
+        white-space: nowrap !important;
+    }
+    .sidebar > a:last-child {
+        margin-top: 0 !important;
+    }
+    .content {
+        padding: 15px !important;
+    }
+    .cards,
+    .stats {
+        grid-template-columns: 1fr !important;
+    }
+    .table-container,
+    .table-box {
+        overflow-x: auto !important;
+    }
+    table {
+        min-width: 720px !important;
+    }
+}
