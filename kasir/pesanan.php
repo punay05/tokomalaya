@@ -2,12 +2,6 @@
 session_start();
 require_once __DIR__ . "/../config/database.php";
 
-/*
- * Toko Malaya - Pesanan Online (Kasir)
- * File tunggal: halaman kasir sekaligus tugas otomatis.
- * Saat dijalankan oleh Cron Job melalui PHP CLI, proses otomatis berjalan
- * lalu keluar tanpa memerlukan login kasir.
- */
 
 if (PHP_SAPI === 'cli') {
     if (!isset($conn) || !($conn instanceof mysqli)) {
